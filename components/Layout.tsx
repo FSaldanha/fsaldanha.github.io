@@ -5,37 +5,35 @@ import Head from 'next/head'
 type Props = {
   children?: ReactNode
   title?: string
+  id?: string
 }
 
-const Layout = ({ children, title = 'This is the default title' }: Props) => (
-  <div>
-    <Head>
-      <title>{title}</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    <header>
-      <nav>
-        <Link href="/">
-          <a>Home</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/about">
-          <a>About</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/users">
-          <a>Users List</a>
-        </Link>{' '}
-        | <a href="/api/users">Users API</a>
-      </nav>
-    </header>
-    {children}
-    <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
-    </footer>
-  </div>
-)
+const openMenu = () => document.querySelector(".page")?.classList.toggle("open-menu");
 
-export default Layout
+export default function Layout({ children, title, id }: Props) {
+  return (
+    <div className={`page page-${id}`}>
+      <svg id="grad-bg" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"></svg>
+      <Head>
+        <title>{id != "home" ? `${title} | ` : ""}Felipe Saldanha</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <header>
+        <ul>
+          <li className="brand"><Link href="/"><a><span>Felipe Saldanha</span></a></Link> <i onClick={openMenu}><span>Menu</span></i></li>
+          <li className={id == "about" ? "active" : ""}><Link href="/about"><a><span>About</span></a></Link></li>
+          <li className={id == "projects" ? "active" : ""}><Link href="/projects"><a><span>Projects</span></a></Link></li>
+          <li className={id == "positions" ? "active" : ""}><Link href="/positions"><a><span>Positions</span></a></Link></li>
+          <li className={id == "education" ? "active" : ""}><Link href="/education"><a><span>Education</span></a></Link></li>
+        </ul>
+      </header>
+      <main>
+        <div className="container">
+          {id != "home" && <h1>{title}</h1>}
+          {children}
+        </div>
+      </main>
+    </div>
+  )
+}

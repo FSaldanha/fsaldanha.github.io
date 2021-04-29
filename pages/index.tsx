@@ -1,15 +1,19 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import Layout from '@components/Layout'
+import animationData from "../assets/animation.json"
+import { Player } from '@lottiefiles/react-lottie-player';
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
+export default function Page() {
+  return <Layout id="home">
+    <div className="information">
+      <h1>Felipe Saldanha</h1>
+      <h2>Front-end developer</h2>
+    </div>
+    <div className="illustration">
+      <Player
+        autoplay
+        loop
+        src={animationData}
+      />
+    </div>
   </Layout>
-)
-
-export default IndexPage
+}
