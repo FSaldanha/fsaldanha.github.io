@@ -18,6 +18,8 @@ export default function Layout({ children, title, id }: Props) {
         <title>{id != "home" ? `${title} | ` : ""}Felipe Saldanha</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Front-end developer" />
+        <meta property="og:image" content="/photo.jpg" />
       </Head>
       <header>
         <ul>

@@ -5,6 +5,10 @@
   line-height: 1.5;
 }
 
+:focus {
+  outline: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -23,6 +27,14 @@ p {
 a {
   color: #777;
   text-decoration: none;
+  transition: color .2s ease-in-out;
+}
+
+p a:hover,
+p a:focus,
+p a:active {
+  color: #222;
+  border-bottom: 1px solid #222;
 }
 
 .small {
@@ -58,7 +70,7 @@ main {
 }
 
 .container > h1::after {
-  content: ">";
+  content: "/>";
 }
 
 .card,
@@ -71,7 +83,7 @@ main {
   border-radius: 10px;
   display: inline-block;
   padding: 10px;
-  margin-right: 10px;
+  /* margin-right: 10px; */
   transition: all .2s ease-in-out;
 }
 
@@ -86,15 +98,14 @@ main {
 .btn:focus,
 .btn:active {
   box-shadow: 0 5px 14px rgba(0,0,0,.15);
-}
-
-.btn:hover {
+  border: none;
   color: #222;
 }
 
-.btn:focus,
-.btn:active {
-  color: #777;
+.btn-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .card,
@@ -105,6 +116,13 @@ main {
 
 .card a {
   display: inline-block;
+  width: 100%;
+}
+
+.card a:hover,
+.card a:focus,
+.card a:active {
+  border: none;
 }
 
 .card a,
@@ -197,14 +215,13 @@ header {
 
 header ul {
   display: flex;
-  align-items: stretch;
   list-style-type: none;
   flex-direction: column;
   height: 100vh;
 }
 
 header li {
-  flex: 1 1 20vh;
+  flex: 1;
 }
 
 header li a {
@@ -213,6 +230,7 @@ header li a {
   color: #fff;
   display: grid;
   font-size: 1.3rem;
+  padding: 0 20px;
 }
 
 header li:not(.brand) a {
@@ -225,7 +243,7 @@ header li:not(.brand) span::before {
 }
 
 header li:not(.brand) span::after {
-  content: ">";
+  content: "/>";
 }
 
 header li a span {
@@ -241,26 +259,24 @@ header li a:focus span {
   background-size: 100% 4px;
 }
 
+header li.active a:focus span {
+  background-image: linear-gradient(#ff0,#ff0);
+}
+
 header li.brand {
   font-weight: bold;
-  display: flex;
-  justify-items: stretch;
-  flex: 1 2 15vh;
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  flex: 0 1 15vh;
 }
 
 header li.brand a {
-  flex: 1;
   place-items: center left;
-}
-
-header li.brand a span {
-  margin-left: 15px;
 }
 
 /* Header > Hamburger button */
 
 header li.brand i {
-  flex-basis: 80px;
   font-size: 0;
   display: grid;
   place-items: center;
@@ -272,8 +288,8 @@ header li.brand i span,
 header li.brand i span::after,
 header li.brand i span::before {
   display: block;
-  height: 5px;
-  width: 50px;
+  height: 3px;
+  width: 40px;
   background: #fff;
   transition: all .2s ease-in-out;
 }
@@ -288,7 +304,7 @@ header li.brand i span::before {
 }
 
 header li.brand i span::after {
-  transform: translateY(10px);
+  transform: translateY(12px);
 }
 
 .open-menu header li.brand i span {
@@ -296,11 +312,11 @@ header li.brand i span::after {
 }
 
 .open-menu header li.brand i span::after {
-  transform: translateY(-3px) rotate(45deg);
+  transform: translateY(-2px) rotate(45deg);
 }
 
 .open-menu header li.brand i span::before {
-  transform: translateY(3px) rotate(-45deg);
+  transform: translateY(2px) rotate(-45deg);
 }
 
 .open-menu main {
@@ -345,7 +361,7 @@ header li.brand i span::after {
 }
 
 .information h2::after {
-  content: ">";
+  content: "/>";
 }
 
 #lottie {
@@ -374,7 +390,9 @@ header li.brand i span::after {
   transform: scale(1.005) translateY(-3px);
 }
 
-.page-projects .card:hover a {
+.page-projects .card a:hover,
+.page-projects .card a:focus,
+.page-projects .card a:active {
   color: #222;
 }
 
@@ -401,7 +419,6 @@ header li.brand i span::after {
 }
 
 @media screen and (min-width: 400px) {
-
   .page-home header li.brand a {
     place-items: center;
   }
@@ -409,7 +426,6 @@ header li.brand i span::after {
   .page-home header li.brand a span {
     margin-left: 100px;
   }
-
 }
 
 @media screen and (min-width: 800px) {
@@ -424,16 +440,18 @@ header li.brand i span::after {
     flex-direction: row;
   }
 
-  header li a {
-    font-size: 1.1rem;
+  header li,
+  header li.brand {
+    flex: 0 1 auto;
   }
 
   header li.brand {
-    flex: 1 1 150px;
+    display: inline;
+    margin-right: auto;
   }
 
-  header li.brand a {
-    place-items: center;
+  header li a {
+    font-size: 1.1rem;
   }
 
   header li.brand i {

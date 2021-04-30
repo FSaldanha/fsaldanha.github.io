@@ -11,13 +11,13 @@ export default function Page() {
       <p>Recently, I worked as Educational Technology Analyst and Acting Professor teaching the disciplines of Digital Journalism and Communication Technologies.</p>
       <p>I am also a graphic designer, content writer and researcher. I have a Undergraduate degree in Journalism, a MBA in Marketing and I am a PhD Candidate in Communication Sciences.</p>
       <h2>Reach me</h2>
-      <p>
-        <a className="btn" href="https://github.com/FSaldanha" target="_blank"><img src="/github.svg" /> Github</a>{' '}
-        <a className="btn" href="https://www.linkedin.com/in/fsaldanha/?locale=en_US" target="_blank"><img src="/linkedin.svg" /> Linkedin</a>{' '}
+      <p className="btn-list">
+        <a className="btn" href="https://github.com/FSaldanha" target="_blank"><img src="/github.svg" /> GitHub</a>
+        <a className="btn" href="https://www.linkedin.com/in/fsaldanha/?locale=en_US" target="_blank"><img src="/linkedin.svg" /> LinkedIn</a>
         <a className="btn" href="mailto:contato@fsaldanha.com.br?subject=[Front-end dev]" target="_blank"><img src="/envelope.svg" /> Email</a>
       </p>
       <h2>Credits</h2>
-      <p>This site was designed and developed with Next.JS by me, Felipe Saldanha. Animation of home page by Jignesh Gajjar. Icons by FontAwesome and Freepik.</p>
+      <p>This site was designed and developed with Next.JS by me, Felipe Saldanha. Animation of home page by <a href="https://lottiefiles.com/39998-web-development" target="_blank">Jignesh Gajjar on Lottie Files</a>. Icons by <a href="http://fontawesome.io/" target="_blank">FontAwesome</a> and <a href="https://www.freepik.com/" target="_blank">Freepik</a> from <a href="https://www.flaticon.com/" target="_blank">Flaticon</a>.</p>
     </div>
   </Layout>
 }
