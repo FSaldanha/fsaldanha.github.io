@@ -8,8 +8,8 @@ export default function Page() {
     <div className="text">
       <p>Hi there.</p>
       <p>I am a freelancer front-end developer, based in São Paulo (Brazil). My main skills are <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>PHP</strong>, <strong>SQL</strong>, <strong>WordPress</strong> and <strong>React</strong>.</p>
-      <p>Recently, I worked as Educational Technology Analyst and Acting Professor teaching the disciplines of Digital Journalism and Communication Technologies.</p>
-      <p>I am also a graphic designer, content writer and researcher. I have a Undergraduate degree in Journalism, a MBA in Marketing and I am a PhD Candidate in Communication Sciences.</p>
+      <p>Recently, I worked as Educational Technology Analyst and Consultant in Communication, developing and updating sites and hypertext resources, besides managing digital media.</p>
+      <p>I am also a graphic designer, content writer and researcher. I have an Undergraduate degree in Journalism, an MBA in Marketing and I am a PhD Candidate in Communication Sciences.</p>
       <h2>Reach me</h2>
       <p className="btn-list">
         <a className="btn" href="https://github.com/FSaldanha" target="_blank"><img src="/github.svg" /> GitHub</a>
