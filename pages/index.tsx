@@ -1,5 +1,4 @@
 import Layout from '@components/Layout'
-import animationData from "../assets/animation.json"
 import { Player } from '@lottiefiles/react-lottie-player';
 
 export default function Page() {
@@ -12,7 +11,7 @@ export default function Page() {
       <Player
         autoplay
         loop
-        src={animationData}
+        src="/animation.json"
       />
     </div>
   </Layout>
