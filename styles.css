@@ -234,16 +234,7 @@ header li a {
 }
 
 header li:not(.brand) a {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   place-items: center;
-}
-
-header li:not(.brand) span::before {
-  content: "<";
-}
-
-header li:not(.brand) span::after {
-  content: "/>";
 }
 
 header li a span {

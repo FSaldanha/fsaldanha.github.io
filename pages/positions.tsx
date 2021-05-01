@@ -14,7 +14,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 export default function Page({ positions }: Props) {
   return <Layout title="Positions" id="positions">
-    <p>Besides my freelancer work since 2009 as front-end developer, back-end developer (for WordPress and other PHP-based CMSs), art director and content writer for a variety of customers, here are some of my main positions:</p>
+    <p>Besides my freelance work since 2009 as a front-end developer, back-end developer (for WordPress and other PHP-based CMSs), art director, and content writer for many customers, here are some of my key positions:</p>
     <div className="timeline">
       {positions.map((position) => (
         <div className="event">

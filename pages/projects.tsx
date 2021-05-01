@@ -27,6 +27,6 @@ export default function Page({ projects }: Props) {
         </p>
       </div>
     ))}
-    <p>Also, the site where you are is open sourced and its code is <a href="https://github.com/FSaldanha/fsaldanha.github.io" target="_blank">available on GitHub</a>. It was made with Next.JS.</p>
+    <p>Also, the website where you are is open source, and its code is <a href="https://github.com/FSaldanha/fsaldanha.github.io" target="_blank">available on GitHub</a>. It uses <a href="http://nextjs.org/" target="_blank">Next.JS</a>.</p>
   </Layout>
 }
