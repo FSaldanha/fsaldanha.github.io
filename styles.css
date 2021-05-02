@@ -83,8 +83,7 @@ main {
   border-radius: 10px;
   display: inline-block;
   padding: 10px;
-  /* margin-right: 10px; */
-  transition: all .2s ease-in-out;
+  transition: box-shadow .2s ease-in-out;
 }
 
 .btn img {
@@ -94,12 +93,16 @@ main {
   margin-right: 5px;
 }
 
-.btn:hover,
+.btn:hover {
+  box-shadow: 0 5px 14px rgba(0,0,0,.15);
+  color: #222;
+  border: none;
+}
+
 .btn:focus,
 .btn:active {
-  box-shadow: 0 5px 14px rgba(0,0,0,.15);
-  border: none;
-  color: #222;
+  border: solid 1px #777;
+  margin: -1px;  
 }
 
 .btn-list {
@@ -209,7 +212,8 @@ header {
   overflow: hidden;
 }
 
-.open-menu header {
+.open-menu header,
+header:focus-within {
   height: 100vh;
 }
 
@@ -257,7 +261,7 @@ header li.active a:focus span {
 header li.brand {
   font-weight: bold;
   display: grid;
-  grid-template-columns: 1fr 80px;
+  grid-template-columns: 1fr 60px;
   flex: 0 1 15vh;
 }
 
@@ -280,9 +284,10 @@ header li.brand i span::after,
 header li.brand i span::before {
   display: block;
   height: 3px;
-  width: 40px;
+  width: 30px;
   background: #fff;
   transition: all .2s ease-in-out;
+  border-radius: 3px;
 }
 
 header li.brand i span::after,
@@ -291,11 +296,11 @@ header li.brand i span::before {
 }
 
 header li.brand i span::before {
-  transform: translateY(-15px);
+  transform: translateY(-10px);
 }
 
 header li.brand i span::after {
-  transform: translateY(12px);
+  transform: translateY(7px);
 }
 
 .open-menu header li.brand i span {
@@ -423,6 +428,7 @@ header li.brand i span::after {
   /* Header */
 
   header,
+  header:focus-within,
   header ul {
     height: max(60px, 15vh);
   }

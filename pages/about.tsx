@@ -1,4 +1,5 @@
 import Layout from '@components/Layout'
+import Obfuscate from 'react-obfuscate'
 
 export default function Page() {
   return <Layout title="About" id="about">
@@ -14,7 +15,16 @@ export default function Page() {
       <p className="btn-list">
         <a className="btn" href="https://github.com/FSaldanha" target="_blank"><img src="/github.svg" /> GitHub</a>
         <a className="btn" href="https://www.linkedin.com/in/fsaldanha/?locale=en_US" target="_blank"><img src="/linkedin.svg" /> LinkedIn</a>
-        <a className="btn" href="mailto:contato@fsaldanha.com.br?subject=[Front-end dev]" target="_blank"><img src="/envelope.svg" /> Email</a>
+        <Obfuscate
+          className="btn"
+          obfuscateChildren={false}
+          email="fgsaldanha@gmail.com"
+          headers={{
+            subject: '[Front-end dev]'
+          }}
+        >
+          <img src="/envelope.svg" /> Email
+        </Obfuscate>
       </p>
       <h2>Credits</h2>
       <p>I designed and developed this website with <a href="http://nextjs.org/" target="_blank">Next.JS</a>. Animation of the home page by <a href="https://lottiefiles.com/39998-web-development" target="_blank">Jignesh Gajjar on Lottie Files</a>. Icons by <a href="http://fontawesome.io/" target="_blank">FontAwesome</a> and <a href="https://www.freepik.com/" target="_blank">Freepik</a> from <a href="https://www.flaticon.com/" target="_blank">Flaticon</a>.</p>
