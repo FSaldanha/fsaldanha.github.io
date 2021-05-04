@@ -308,7 +308,7 @@ header li.brand i span::after {
 }
 
 .open-menu header li.brand i span::after {
-  transform: translateY(-2px) rotate(45deg);
+  transform: translateY(-1px) rotate(45deg);
 }
 
 .open-menu header li.brand i span::before {

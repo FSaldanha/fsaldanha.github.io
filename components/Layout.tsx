@@ -20,6 +20,17 @@ export default function Layout({ children, title, id }: Props) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content="Front-end developer" />
         <meta property="og:image" content="/photo.jpg" />
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_ANALYTICS_ID}`} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${process.env.NEXT_PUBLIC_ANALYTICS_ID}');
+              `,
+          }}
+        />
       </Head>
       <header>
         <ul>
