@@ -15,6 +15,7 @@ export default function Page() {
       <p className="btn-list">
         <a className="btn" href="https://github.com/FSaldanha" target="_blank"><img src="/github.svg" /> GitHub</a>
         <a className="btn" href="https://www.linkedin.com/in/fsaldanha/?locale=en_US" target="_blank"><img src="/linkedin.svg" /> LinkedIn</a>
+        <a className="btn" href="https://www.behance.net/fsaldanha" target="_blank"><img src="/behance.svg" /> Behance</a>
         <Obfuscate
           className="btn"
           obfuscateChildren={false}

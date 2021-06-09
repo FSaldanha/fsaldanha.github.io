@@ -15,8 +15,8 @@ export const getStaticProps: GetStaticProps = async () => {
 export default function Page({ education }: Props) {
   return <Layout title="Education" id="education">
     <div className="timeline">
-      {education.map((course) => (
-        <div className="event">
+      {education.map((course, k) => (
+        <div className="event" key={k}>
           <p className="small">{course.dates}</p>
           <h2>{course.title}</h2>
           <h3>{course.institution}</h3>
