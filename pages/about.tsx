@@ -16,6 +16,7 @@ export default function Page() {
         <a className="btn" href="https://github.com/FSaldanha" target="_blank"><img src="/github.svg" /> GitHub</a>
         <a className="btn" href="https://www.linkedin.com/in/fsaldanha/?locale=en_US" target="_blank"><img src="/linkedin.svg" /> LinkedIn</a>
         <a className="btn" href="https://www.behance.net/fsaldanha" target="_blank"><img src="/behance.svg" /> Behance</a>
+        <a className="btn" href="https://stackoverflow.com/users/7724384/felipe-saldanha" target="_blank"><img src="/stackoverflow.svg" /> Stack Overflow</a>
         <Obfuscate
           className="btn"
           obfuscateChildren={false}
