@@ -19,7 +19,7 @@ export const getStaticProps: GetStaticProps = async () => {
 }
 
 export default function Page({ projects }: Props) {
-  return <Layout title="Projects" id="projects">
+  return <Layout title="Projects" page="projects">
     {projects.map((project, k) => (
       <div className="card" key={k}>
         <p>

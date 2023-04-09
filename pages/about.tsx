@@ -2,7 +2,7 @@ import Layout from '@components/Layout'
 import Obfuscate from 'react-obfuscate'
 
 export default function Page() {
-  return <Layout title="About" id="about">
+  return <Layout title="About" page="about">
     <div className="photo">
       <img src="/photo.jpg" alt="Felipe Saldanha" />
     </div>

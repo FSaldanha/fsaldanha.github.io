@@ -2,7 +2,7 @@ import Layout from '@components/Layout'
 import { Player } from '@lottiefiles/react-lottie-player';
 
 export default function Page() {
-  return <Layout id="home">
+  return <Layout page="home">
     <div className="information">
       <h1>Felipe Saldanha</h1>
       <h2>Front-end developer</h2>

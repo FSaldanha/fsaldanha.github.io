@@ -13,7 +13,7 @@ export const getStaticProps: GetStaticProps = async () => {
 }
 
 export default function Page({ positions }: Props) {
-  return <Layout title="Positions" id="positions">
+  return <Layout title="Positions" page="positions">
     <p>Besides my freelance work since 2009 as a front-end developer, back-end developer (for WordPress and other PHP-based CMSs), art director, and content writer for many customers, here are some of my key positions:</p>
     <div className="timeline">
       {positions.map((position, k) => (

@@ -13,7 +13,7 @@ export const getStaticProps: GetStaticProps = async () => {
 }
 
 export default function Page({ education }: Props) {
-  return <Layout title="Education" id="education">
+  return <Layout title="Education" page="education">
     <div className="timeline">
       {education.map((course, k) => (
         <div className="event" key={k}>
