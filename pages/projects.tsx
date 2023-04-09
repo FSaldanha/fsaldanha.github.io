@@ -3,8 +3,9 @@ import Layout from '@components/Layout'
 import content from '@contents/projects.json'
 
 type Project = {
-  title?: string
   url?: string
+  title?: string
+  lead?: string
   description?: string
 }
 
@@ -22,8 +23,11 @@ export default function Page({ projects }: Props) {
     {projects.map((project, k) => (
       <div className="card" key={k}>
         <p>
-          <a href={project.url} target="_blank"><strong>{project.title}</strong><br />
-            {project.description}</a>
+          <a href={project.url} target="_blank">
+            <strong>{project.title}</strong><br />
+            <em>{project.lead}</em><br />
+            {project.description}
+          </a>
         </p>
       </div>
     ))}
