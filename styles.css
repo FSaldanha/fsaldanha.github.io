@@ -133,7 +133,8 @@ main {
   padding: 30px;
 }
 
-.card strong {
+.card strong,
+.card em {
   display: inline-block;
 }
 
@@ -142,6 +143,7 @@ main {
 }
 
 .card strong,
+.card em,
 .event .small,
 .event h2,
 .event h3 {
