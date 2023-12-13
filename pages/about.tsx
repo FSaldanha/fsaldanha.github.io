@@ -9,8 +9,8 @@ export default function Page() {
     <div className="text">
       <p>Hi there.</p>
       <p>I am a freelance front-end developer based in São Paulo, Brazil. My top skills are <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>PHP</strong>, <strong>SQL</strong>, <strong>WordPress</strong> and <strong>React</strong>.</p>
-      <p>Recently, I worked as an Educational Technology Analyst and a Consultant in Communication, developing and updating websites and hypertext resources, besides managing digital media.</p>
-      <p>I am also a graphic designer, content writer, and researcher. I have an undergraduate degree in Journalism, an MBA in Marketing, and I am a Ph.D. Candidate in Communication Sciences.</p>
+      <p>Recently, I worked as Educational Technology Analyst and Consultant in Communication, developing and updating websites and hypertext resources, besides managing digital media.</p>
+      <p>I am also a graphic designer, content writer, and researcher. I have an undergraduate degree in Journalism, an MBA in Marketing, and a PhD in Communication Sciences.</p>
       <h2>Reach me</h2>
       <p className="btn-list">
         <a className="btn" href="https://github.com/FSaldanha" target="_blank"><img src="/github.svg" /> GitHub</a>
